@@ -5,6 +5,10 @@
 #ifndef MOONY_CLIENT_HPP
 #define MOONY_CLIENT_HPP
 
+#include <cstdio>
+#include <cstdlib>
+
+#include <GLFW/glfw3.h>
 
 class Client {
 private:

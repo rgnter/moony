@@ -8,4 +8,4 @@ link_libraries(../deps/lib/glfw/win32/glfw3)
 
 include_directories(deps/vendor)
 
-add_executable(moony source/bootstrap.cpp source/Client.cpp source/Client.hpp )
+add_executable(moony deps/vendor/glad/glad.c source/bootstrap.cpp source/Client.cpp source/Client.hpp)
