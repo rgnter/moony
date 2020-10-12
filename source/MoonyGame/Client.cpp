@@ -15,10 +15,5 @@ bool Client::ShouldRun() const {
 }
 
 void Client::Start() {
-    if(!glfwInit()) {
-        printf("GLFW init fail\n");
-        return;
-    }
-
 
 }

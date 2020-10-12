@@ -30,6 +30,7 @@ int main(int argc, char **argv) {
 
     printf("%s", debug ? "Debug enabled\n" : "");
     printf("Resolution%s: %dx%d\n", mod ? " (from opt)" : " (default)", width, height);
+    printf("MoonyEngine ver: %s", VERSION);
 
     Client client(debug, width, height);
     client.Start();

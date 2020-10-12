@@ -7,14 +7,16 @@
 
 #include <cstdio>
 #include <cstdlib>
+#include <MoonyEngine.hpp>
 
-#include <GLFW/glfw3.h>
 
 class Client {
 private:
     bool debug;
     int width;
     int height;
+
+    MoonyEngine engine;
 
 private:
     volatile bool shouldRun = false;
