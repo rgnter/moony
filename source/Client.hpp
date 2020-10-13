@@ -22,6 +22,7 @@ private:
     int width;
     int height;
 
+    bool fullscreen = false;
 private:
     volatile bool shouldRun = false;
 
@@ -38,6 +39,8 @@ private:
 public:
     bool IsDebug() const;
     bool ShouldRun() const;
+
+    void SetFullscreen(bool fullscreen);
 };
 
 

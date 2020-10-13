@@ -9,11 +9,13 @@ int main( int argc, char** argv) {
     cxxopts::Options options("Moony", "Moony desc.");
     options.add_options()
             ("d,debug", "Enable debugging") // a bool parameter
+            ("f,fullscreen", "Enable debugging") // a bool parameter
             ("width", "Width param", cxxopts::value<int>())
             ("height", "Width param", cxxopts::value<int>());
     auto result = options.parse(argc, argv);
 
     bool debug = result["debug"].as<bool>();
+    bool fullscreen = result["fullscreen"].as<bool>();
 
     bool mod = false;
     int width = 1920;
@@ -37,5 +39,6 @@ int main( int argc, char** argv) {
     spdlog::info("Resolution{}: {}x{}", mod ? " (from opt)" : " (default)", width, height);
 
     Client client(debug, width, height);
+    client.SetFullscreen(fullscreen);
     client.Start();
 }
